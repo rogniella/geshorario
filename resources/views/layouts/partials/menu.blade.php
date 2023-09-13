@@ -12,7 +12,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profesores.registro') }}">REGISTRO ENTRADA/SALID</a>
+                            <a class="nav-link" href="{{ route('profesores.registro') }}">Registro Entrada / Salida</a>
                         </li>
 
                       @guest
