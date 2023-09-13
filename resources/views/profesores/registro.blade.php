@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme="dark"
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme=""
   aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">REGISTRO de Entrada/Salida</h5>
+          <h5 class="modal-title" id="loginModalLabel">REGISTRO de Entrada / Salida</h5>
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
