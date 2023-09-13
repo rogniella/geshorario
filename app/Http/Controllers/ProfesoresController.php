@@ -26,6 +26,7 @@ class ProfesoresController extends Controller
 
      $datos =  (object) [ 'dni' => $request->dni ,
                 'apellido' => "Juan Perez",
+                'ultima_salida' => "01/08/2023 14:00 hs" ,
                 'ultimo_ingreso' => "01/08/2023 14:00 hs"  ];
       
      return view('profesores.registro_confirmacion', [ 'datos' => $datos ]  );          
