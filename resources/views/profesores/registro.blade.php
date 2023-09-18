@@ -33,18 +33,7 @@
       </div>
     </div>
 </div>
-<!--<div>Registro de Entrada/Salida</div>
 
-<form method="POST" action="{{ route('profesores.registro_graba') }}">
-    @csrf
-
-    <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
-
-    <input id="password" type="password" class="form-control" name="password" required>
-    
-    <button type="submit" class="btn btn-success btn-block">Ingresar</button>
-
-</form>  -->  
 @endsection
 
 @section('scrip')
