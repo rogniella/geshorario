@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="modal fade text-white" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme="dark"
   aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog" role="document">
@@ -16,8 +15,8 @@
         <form method="POST" action="{{ route('profesores.registro_graba') }}">
             @csrf
             
-            <h3 id="MyClockDate" onload="showDate();"></h3>
-            <h3  id="MyClockTime" onload="showTime();"></h3>
+            <h5 id="MyClockDate" onload="showDate();"></h5>
+            <h5  id="MyClockTime" onload="showTime();"></h5>
 
             <p>Dni</p>
             <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
