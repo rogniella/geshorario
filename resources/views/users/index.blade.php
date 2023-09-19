@@ -1,28 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-    
-    <!-- Panel de la tabla -->
-    <div class="panel panel-info">         
-      <div class="panel-heading">
-            <h3 class="panel-title">Lista de usuarios</h3>
-      </div>
-      <div class="panel-body">
-		<a href="{{ route('users.create')}}" class="pull-right btn btn-success"><i class="glyphicon glyphicon-plus"></i> Nuevo Usuario</a>
-		<table id="mitabla" class="table table-striped">
-		  <thead>
-			<th>Id</th>
-			<th>Usuario</th>
-			<th>Apellido y Nombre</th>
-			<th>Email</th>
-			<th>Tipo</th>
-			<th>Estado</th>
-			<th>Accion</th>
-		  </thead>
-		  <tbody>
-			@foreach($users as $user)
+
+	<div class="container">
+
+		<div class="panel-heading text-center">
+			<h3 class="panel-title">Lista de usuarios</h3>
+		</div>
+
+		<div class="panel-bottom mb-2 mt-2">
+			<a href="{{ route('users.create')}}" class="pull-right btn btn-success"> <i class="bi bi-person-fill-add m-1"></i> Nuevo Usuario</a>
+		</div>
+
+		<table class="table table-hover" id="mitabla">
+			<thead>
 				<tr>
-					<td>{{ $user->id}}</td>
+					<th scope="col">Id</th>
+					<th scope="col">Usuario</th>
+					<th scope="col">Apellido y Nombre</th>
+					<th scope="col">Email</th>
+					<th scope="col">Tipo</th>
+					<th scope="col">Estado</th>
+					<th scope="col">Accion</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach($users as $user)
+				<tr>
+					<td scope="row">{{ $user->id}}</td>
 					<td>{{ $user->name}}</td>
 					<td>{{ $user->apellidonombre}}</td>
 					<td>{{ $user->email}}</td>
@@ -35,15 +40,15 @@
 					</td>					
 					<td>{{ $user->estado_nombre}}</td>
 					<td>
-						<a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"> <span class="glyphicon glyphicon-wrench " aria-hidden="true"></span></a> 
-						<a href="{{ route('user.destroy', $user->id) }}" onclick="return confirm('Seguro de Eliminar Usuario')" class="btn btn-danger"> <span class="glyphicon glyphicon-remove-circle " aria-hidden="true"></span></a>
+						<a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"> <i class="bi bi-pencil"></i> </a> 
+						<a href="{{ route('user.destroy', $user->id) }}" onclick="return confirm('Seguro de Eliminar Usuario')" class="btn btn-danger"> <i class="bi bi-trash"></i> </a>
 					</td>
 				</tr>
 			@endforeach
-		  </tbody>
+			</tbody>
 		</table>
-       </div> <!-- Fin Panel Body -->
-    </div> <!-- Fin Panel Info -->
+
+	</div>
 
 @endsection()
 
@@ -64,10 +69,13 @@ $(document).ready(function () {
    // Definimos para 1 tabla en particular
 	$('#mitabla').DataTable({
 		 searching: true,
-		 dom: '<"toolbar">frtip',
+		 dom: '<"toolbar">ftip',
+		 language: {
+         	url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
+    },
 	});
 
-	$('div.toolbar').html('<b>Personalizar Text/images etc.</b>');
+	$('div.toolbar').html('');
 
 });
 
