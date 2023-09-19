@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme=""
+<div class="modal fade text-white" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme="dark"
   aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">REGISTRO de Entrada / Salida lalalalalalalalalalal</h5>
-            <span aria-hidden="true">&times;</span>
-          </button>
+
+          <h5 class="modal-title" id="loginModalLabel">Registro de Entrada/Salida</h5>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">X</button>
         </div>
         <div class="modal-body">
         
         <form method="POST" action="{{ route('profesores.registro_graba') }}">
             @csrf
             
-            <h3 id="MyClockDate" onload="showDate();"></h3>
-            <h3  id="MyClockTime" onload="showTime();"></h3>
+            <h5 id="MyClockDate" onload="showDate();"></h5>
+            <h5  id="MyClockTime" onload="showTime();"></h5>
 
             <p>Dni</p>
             <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
@@ -32,18 +32,7 @@
       </div>
     </div>
 </div>
-<!--<div>Registro de Entrada/Salida</div>
 
-<form method="POST" action="{{ route('profesores.registro_graba') }}">
-    @csrf
-
-    <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
-
-    <input id="password" type="password" class="form-control" name="password" required>
-    
-    <button type="submit" class="btn btn-success btn-block">Ingresar</button>
-
-</form>  -->  
 @endsection
 
 @section('scrip')
