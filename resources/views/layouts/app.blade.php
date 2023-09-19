@@ -29,7 +29,7 @@
     </div>
 
     <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
-    @yield('scrip')
+    @yield('script')
 
 </body>
 </html>

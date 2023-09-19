@@ -35,7 +35,7 @@
 
 @endsection
 
-@section('scrip')
+@section('script')
 
 <script>
 
