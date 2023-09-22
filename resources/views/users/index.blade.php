@@ -5,24 +5,25 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="col-12 mb-5">
+
+			<div class="col-12 mb-4">
 
 				<div class="text-center shadow-lg p-2 bg-body-tertiary rounded">
-					<h3 class="panel-title">Lista de usuarios</h3>
+					<h3 class="fw-bold">Lista de usuarios</h3>
 				</div>
 				
 			</div>
 
-			<div class="col-2">
+			<div class="col-2 mb-4">
 
-				<div class="panel-bottom mb-2 mt-2">
-					<a href="{{ route('users.create')}}" class="pull-right btn btn-success"> <i class="bi bi-person-fill-add m-1"></i> Nuevo Usuario</a>
+				<div class="panel-bottom mt-2">
+					<a href="{{ route('users.create')}}" class="pull-right btn btn-success fw-bold"> <i class="bi bi-person-fill-add m-1"></i> Nuevo Usuario</a>
 				</div>
 
 			</div>
 
 
-			<div class="col-12">
+			<div class="col-12 mb-4">
 
 				<table class="table table-hover shadow-lg p-2 bg-body-tertiary rounded" id="mitabla">
 					<thead>
@@ -84,11 +85,11 @@ $(document).ready(function () {
 
    // Definimos para 1 tabla en particular
 	$('#mitabla').DataTable({
-		 searching: true,
-		 dom: '<"toolbar">ftip',
-		 language: {
-         	url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
-    },
+		searching: true,
+		dom: '<"col-md-1"f> tlp',
+		language: {
+            url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
+    	},
 	});
 
 	$('div.toolbar').html('');
