@@ -1,37 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="modal fade text-white" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme="dark"
-  aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content bg-dark">
-        <div class="modal-header">
 
-          <h5 class="modal-title" id="loginModalLabel">Registro de Entrada/Salida</h5>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">X</button>
+<section class="container py-1">
+<div class="row justify-content-center ">
+  <div class="col-lg-5 col-md-6">
+    <div class="card mb-4 border-primary border border-4">
+      <div class="card-body bg-black text-white">
+        <div class="text-center">
+          <img src="{{ asset('img/isfdlogo.png') }}"class="rounded" width="150" alt="">
         </div>
-        <div class="modal-body">
-        
+        <h5 class="card-title">Registro de Entrada/Salida</h5>
         <form method="POST" action="{{ route('profesores.registro_graba') }}">
             @csrf
             
-            <h5 id="MyClockDate" onload="showDate();"></h5>
-            <h5  id="MyClockTime" onload="showTime();"></h5>
-
-            <p>Dni</p>
-            <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
+            <p>FECHA: <h7 class="" id="MyClockDate" onload="showDate();"></h7></p>
+            <p>HORA: <h7 class="" id="MyClockTime" onload="showTime();"></h7></p>
+            
+            <div class="input-group input-group-sm mb-3">
+              <input id="dni" type="text" name="dni" class="form-control" value="" placeholder="Ingrese Dni" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required  autofocus></p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <input id="password" type="password" class="form-control" name="password" value="" placeholder="Ingrese Contraseña" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+            <div class="card-footer text-center">
+            <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
             <br>
-            <p>Password</p>
-            <input id="password" type="password" class="form-control" name="password" value="" required>
-    
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-success btn-block">Ingresar</button>
+            <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
+            </div>
           </div>
         </div>
         </form> 
       </div>
     </div>
+  </div>
 </div>
+</section>
 
 @endsection
 
