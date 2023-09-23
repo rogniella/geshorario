@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Laracasts\Flash\Flash;
 
 // use App\Models\profesor;  
 
@@ -13,6 +14,7 @@ class ProfesoresController extends Controller
   public function registro ()  {
 
     //probar:  http://localhost/geshorario/public/profesores/registro
+
 
     return view('profesores.registro'  );
 
@@ -28,9 +30,18 @@ class ProfesoresController extends Controller
                 'apellido' => "Juan Perez",
                 'ultima_salida' => "01/08/2023 14:00 hs" ,
                 'ultimo_ingreso' => "01/08/2023 14:00 hs"  ];
-      
-     return view('profesores.registro_confirmacion', [ 'datos' => $datos ]  );          
 
+      if ($request->dni == 1 ) {
+          Flash::error("Error: No esta Registrado " );
+          return view('profesores.registro'  );
+
+      } else {
+         return view('profesores.registro_confirmacion', [ 'datos' => $datos ]  );          
+      }        
+    
+                        
+
+    
 
   }
 

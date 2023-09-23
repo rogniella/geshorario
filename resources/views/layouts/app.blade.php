@@ -16,7 +16,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}"> 
+    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
 
 </head>
 <body>
@@ -29,7 +29,7 @@
     </div>
 
     <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
-    @yield('scrip')
+    @yield('script')
 
 </body>
 </html>
