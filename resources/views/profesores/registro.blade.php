@@ -1,42 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- 
-<section class="container py-1">
-    <div class="row justify-content-center ">
-        <div class="col-lg-5 col-md-6">
-            <div class="card mb-4 shadow-lg p-2 bg-body-tertiary rounded">
-                <div class="card-body">
-
-                    <div class="text-center">
-                        <img src="{{ asset('img/isfdlogo.png') }}"class="rounded" width="150" alt="">
-                    </div>
-
-                    <h5 class="card-title">Registro de Entrada/Salida</h5>
-                    <form method="POST" action="{{ route('profesores.registro_graba') }}">
-                        @csrf
-                        
-                        <p>FECHA: <h7 class="" id="MyClockDate" onload="showDate();"></h7></p>
-                        <p>HORA: <h7 class="" id="MyClockTime" onload="showTime();"></h7></p>
-                        
-                        <div class="input-group input-group-sm mb-3">
-                            <input id="dni" type="text" name="dni" class="form-control" value="" placeholder="Ingrese Dni" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required  autofocus></p>
-                        </div>
-                        <div class="input-group input-group-sm mb-3">
-                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Ingrese Contraseña" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required>
-                        </div>
-                        <div class="card-footer text-center m-3">
-                            <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
-                            <br><br>
-                            <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
-                        </div>
-                    </form> 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
 
 <div class="container">
 	<div class="row">
@@ -79,7 +43,7 @@
                         <input id="password" type="password" class="form-control" name="password" value="" required>
                     </div>
 
-                    <div class="mb-1">
+                    <div class="mb-1 text-center">
                         <button type="submit" class="btn btn-success btn-block">Ingresar</button>
                     </div>
 
@@ -94,48 +58,47 @@
 	</div>
 </div>
 
-<!-- VERSION PREMIUM
-<div class="container">
-	<div class="row">
-		
-        <div class="col-12 mb-4">
 
-			<div class="text-center shadow-lg p-2 bg-body-tertiary rounded">
-                <h3 class="fw-bold">Registro de Entrada / Salida</h3>
-			</div>
+<!-- OTRAS VERSIONES PARA PROBAR CUAL QUEDA MEJOR -->
 
-		</div>
+<!-- 
+<section class="container py-1">
+    <div class="row justify-content-center ">
+        <div class="col-lg-5 col-md-6">
+            <div class="card mb-4 shadow-lg p-2 bg-body-tertiary rounded">
+                <div class="card-body">
 
-		<div class="col-12 mb-4 fw-bold">
+                    <div class="text-center">
+                        <img src="{{ asset('img/isfdlogo.png') }}"class="rounded" width="150" alt="">
+                    </div>
 
-            <form class="shadow-lg p-2 bg-body-tertiary rounded" method="POST" action="{{ route('profesores.registro_graba') }}">
-                @csrf
-
-                <ul class="list-group list-group-flush text-center m-2">
-                    <li class="list-group-item" id="MyClockDate" onload="showDate();"></li>
-                    <li class="list-group-item" id="MyClockTime" onload="showTime();"></li>
-                </ul>
-
-                <div class="mb-4">
-                    <label for="form-label">DNI</label>
-                    <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
+                    <h5 class="card-title">Registro de Entrada/Salida</h5>
+                    <form method="POST" action="{{ route('profesores.registro_graba') }}">
+                        @csrf
+                        
+                        <p>FECHA: <h7 class="" id="MyClockDate" onload="showDate();"></h7></p>
+                        <p>HORA: <h7 class="" id="MyClockTime" onload="showTime();"></h7></p>
+                        
+                        <div class="input-group input-group-sm mb-3">
+                            <input id="dni" type="text" name="dni" class="form-control" value="" placeholder="Ingrese Dni" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required  autofocus></p>
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Ingrese Contraseña" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required>
+                        </div>
+                        <div class="card-footer text-center m-3">
+                            <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
+                            <br><br>
+                            <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
+                        </div>
+                    </form> 
                 </div>
-                
-                <div class="mb-4">
-                    <label for="form-label">Contraseña</label>
-                    <input id="password" type="password" class="form-control" name="password" value="" required>
-                </div>
-            
-				<div class="mb-1">
-                    <button type="submit" class="btn btn-success btn-block">Ingresar</button>
-                </div>
-
-            </form> 
-
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</section>
 -->
+
+
 <!-- 
 <section class="container py-1">
 <div class="row justify-content-center ">
