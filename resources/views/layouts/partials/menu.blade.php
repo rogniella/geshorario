@@ -1,5 +1,8 @@
 <!-- MENU Principal de la Aplicacion -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+            <div class="m-1">
+                <img src="{{ asset('img/isfdlogo.png') }}"class="rounded" width="50" alt="">
+            </div>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
