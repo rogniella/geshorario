@@ -1,37 +1,69 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="modal fade text-white" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme="dark"
-  aria-hidden="true" data-bs-backdrop="static">
+
+<div class="modal fade fw-bold" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" data-bs-theme="" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog" role="document">
-      <div class="modal-content bg-dark">
-        <div class="modal-header">
+        <div class="modal-content">
 
-          <h5 class="modal-title" id="loginModalLabel">Registro de Entrada/Salida</h5>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">X</button>
-        </div>
-        <div class="modal-body">
-        
-        <form method="POST" action="{{ route('profesores.registro_graba') }}">
+            <div class="modal-header fw-bold">
+                <h5 class="modal-title" id="loginModalLabel">Registro de Entrada/Salida</h5>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <form class="" method="POST" action="{{ route('profesores.registro_graba') }}">
             @csrf
-            
-            <h5 id="MyClockDate" onload="showDate();"></h5>
-            <h5  id="MyClockTime" onload="showTime();"></h5>
+                <div class="modal-body">
+                    
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item" id="MyClockDate" onload="showDate();"></li>
+                        <li class="list-group-item" id="MyClockTime" onload="showTime();"></li>
+                    </ul>
 
-            <p>Dni</p>
-            <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
-            <br>
-            <p>Password</p>
-            <input id="password" type="password" class="form-control" name="password" value="" required>
-    
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-success btn-block">Ingresar</button>
-          </div>
+                    <div class="mb-4">
+                        <label for="form-label">DNI</label>
+                        <input id="dni" type="text" name="dni" class="form-control" value="" required  autofocus>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="form-label">Contraseña</label>
+                        <input id="password" type="password" class="form-control" name="password" value="" required>
+                    </div>
+            
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success btn-block">Ingresar</button>
+                </div>
+            </form> 
         </div>
-        </form> 
-      </div>
     </div>
 </div>
+
+<!--
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
 
 @endsection
 
