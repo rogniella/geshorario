@@ -2,6 +2,40 @@
 
 @section('content')
 
+<section class="container py-1">
+<div class="row justify-content-center ">
+  <div class="col-lg-5 col-md-6">
+    <div class="card mb-4 border-primary border border-4">
+      <div class="card-body bg-black text-white">
+        <div class="text-center">
+          <img src="{{ asset('img/isfdlogo.png') }}"class="rounded" width="150" alt="">
+        </div>
+        <h5 class="card-title">Registro de Entrada/Salida</h5>
+        <form method="POST" action="{{ route('profesores.registro_graba') }}">
+            @csrf
+            
+            <p>FECHA: <h7 class="" id="MyClockDate" onload="showDate();"></h7></p>
+            <p>HORA: <h7 class="" id="MyClockTime" onload="showTime();"></h7></p>
+            
+            <div class="input-group input-group-sm mb-3">
+              <input id="dni" type="text" name="dni" class="form-control" value="" placeholder="Ingrese Dni" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required  autofocus></p>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <input id="password" type="password" class="form-control" name="password" value="" placeholder="Ingrese Contraseña" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
+                <br>
+                <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
+            </div>
+        </form> 
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 
 <div class="container">
 	<div class="row">
 		
@@ -24,8 +58,8 @@
                     
                     <ul class="list-group list-group-flush text-center">
 
-                        <li class="list-group-item" id="MyClockDate" onload="showDate();" id="showDate"></li>
-                        <li class="list-group-item" id="MyClockTime" onload="showTime();" id="showTime"></li>
+                        <li class="list-group-item" id="MyClockDate" onload="showDate();" id="fecha_entrada" name="fecha_entrada"></li>
+                        <li class="list-group-item" id="MyClockTime" onload="showTime();" id="hora_entrada" name="hora_entrada"></li>
 
                     </ul>
                 
@@ -57,7 +91,7 @@
 
 	</div>
 </div>
-
+-->
 
 <!-- OTRAS VERSIONES PARA PROBAR CUAL QUEDA MEJOR -->
 
@@ -96,43 +130,8 @@
         </div>
     </div>
 </section>
--->
-
-
-<!-- 
-<section class="container py-1">
-<div class="row justify-content-center ">
-  <div class="col-lg-5 col-md-6">
-    <div class="card mb-4 border-primary border border-4">
-      <div class="card-body bg-black text-white">
-        <div class="text-center">
-          <img src="{{ asset('img/isfdlogo.png') }}"class="rounded" width="150" alt="">
-        </div>
-        <h5 class="card-title">Registro de Entrada/Salida</h5>
-        <form method="POST" action="{{ route('profesores.registro_graba') }}">
-            @csrf
-            
-            <p>FECHA: <h7 class="" id="MyClockDate" onload="showDate();"></h7></p>
-            <p>HORA: <h7 class="" id="MyClockTime" onload="showTime();"></h7></p>
-            
-            <div class="input-group input-group-sm mb-3">
-              <input id="dni" type="text" name="dni" class="form-control" value="" placeholder="Ingrese Dni" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required  autofocus></p>
-            </div>
-            <div class="input-group input-group-sm mb-3">
-              <input id="password" type="password" class="form-control" name="password" value="" placeholder="Ingrese Contraseña" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required>
-            </div>
-            <div class="card-footer text-center">
-                <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
-                <br>
-                <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
-            </div>
-        </form> 
-      </div>
-    </div>
-  </div>
-</div>
-</section>
  -->
+
 @endsection
 
 @section('script')
