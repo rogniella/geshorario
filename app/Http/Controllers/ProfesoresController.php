@@ -28,7 +28,7 @@ class ProfesoresController extends Controller
      $fyh = now();
 
      $datos =  (object) [ 'dni' => $request->dni ,
-                'apellido' => "Juan Perez",
+               'apellido' => $request->apellido,
                 'fyh' => $fyh 
               ];
 
