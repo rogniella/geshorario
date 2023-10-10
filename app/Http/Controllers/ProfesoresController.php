@@ -25,11 +25,12 @@ class ProfesoresController extends Controller
       // Boton Aceptar de la vista registro
 
      // $datos = profesor::buscarDni($request->dni);
+     $fyh = now();
 
      $datos =  (object) [ 'dni' => $request->dni ,
                 'apellido' => "Juan Perez",
-                'ultima_salida' => "01/08/2023 14:00 hs" ,
-                'ultimo_ingreso' => "01/08/2023 14:00 hs"  ];
+                'fyh' => $fyh 
+              ];
 
       if ($request->dni == 1 ) {
           Flash::error("Error: No esta Registrado " );

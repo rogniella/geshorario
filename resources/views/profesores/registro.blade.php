@@ -25,7 +25,7 @@
             </div>
             <div class="card-footer text-center">
                 <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
-                <br>
+                    <br>
                 <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
             </div>
         </form> 
