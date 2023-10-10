@@ -27,23 +27,20 @@ class ProfesoresController extends Controller
      // $datos = profesor::buscarDni($request->dni);
 
      $datos =  (object) [ 'dni' => $request->dni ,
-                'apellido' => "Juan Perez",
-                'ultima_salida' => "01/08/2023 14:00 hs" ,
-                'ultimo_ingreso' => "01/08/2023 14:00 hs"  ];
+                'apellido' => $request->apellido,
+                'fecha_entrada' => $request->fecha_entrada,
+                'hora_entrada' => $request->hora_entrada,
+                'password' => $request->password,
+              ];
 
       if ($request->dni == 1 ) {
-          Flash::error("Error: No esta Registrado " );
+          Flash::error("Error: No esta Registrado" );
           return view('profesores.registro'  );
 
       } else {
          return view('profesores.registro_confirmacion', [ 'datos' => $datos ]  );          
       }        
-    
-                        
-
-    
 
   }
-
 
 } // Fin Controller

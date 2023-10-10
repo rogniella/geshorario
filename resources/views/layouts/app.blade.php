@@ -22,7 +22,7 @@
 <body>
     <div id="app">
         @include('layouts.partials.menu')
-        <main class="py-4">
+        <main class="p-5">
             @include('flash::message')
             @yield('content')
         </main>

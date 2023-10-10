@@ -10,11 +10,11 @@
                         <div class="card-body">
                             <h5 class="card-title">Entrada Registrada:</h5>
                             <ul class="list-group">
-                                <li class="list-group-item">Apellido y Nombre:  {{ $datos->apellido }}</li>
-                                <li class="list-group-item">DNI:  {{ $datos->dni }}</li>
-                                <li class="list-group-item">Ultimo Ingreso:  {{ $datos->ultimo_ingreso }}</li>
-                                <li class="list-group-item">Ultima Salida:  {{ $datos->ultima_salida }}</li>
-                            
+                                <li class="list-group-item">DNI: {{ $datos->dni }}</li>
+                                <li class="list-group-item">Apellido: {{ $datos->apellido }}</li>
+                                <li class="list-group-item">Fecha: {{ $datos->fecha_entrada }}</li>
+                                <li class="list-group-item">Hora: {{ $datos->hora_entrada }}</li>
+                                <li class="list-group-item">Contraseña: {{ $datos->password }}</li>
                             </ul>
                             <br>
                             <button type="submit" class="btn btn-primary">Aceptar</button>
@@ -24,14 +24,6 @@
             </div>
         </section>
 </div>
-
-
-<!--<div>Entrada Registrada:</div>
-
-<div> DNI:  {{ $datos->dni }}</div>
-<div> Apellido y Nombre:  {{ $datos->apellido }}</div>
-<div> Ultimo Ingreso:  {{ $datos->ultimo_ingreso }}</div>
--->
 
 
 
