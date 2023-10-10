@@ -33,18 +33,13 @@ class ProfesoresController extends Controller
               ];
 
       if ($request->dni == 1 ) {
-          Flash::error("Error: No esta Registrado " );
+          Flash::error("Error: No esta Registrado" );
           return view('profesores.registro'  );
 
       } else {
          return view('profesores.registro_confirmacion', [ 'datos' => $datos ]  );          
       }        
-    
-                        
-
-    
 
   }
-
 
 } // Fin Controller
