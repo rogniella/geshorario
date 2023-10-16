@@ -13,8 +13,6 @@
 
                                 <li class="list-group-item">DNI: {{ $datos->dni }}</li>
                                 <li class="list-group-item">Apellido: {{ $datos->apellido }}</li>
-                                <li class="list-group-item">Ultimo Ingreso:  {{ $datos->fyh }}</li>
-                                <li class="list-group-item">Ultima Salida:  {{ $datos->fyh }}</li>
 
                             </ul>
                             <br>

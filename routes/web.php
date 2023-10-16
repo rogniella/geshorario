@@ -18,7 +18,7 @@ use App\Http\Controllers\AsistenciasController;
 
 //ASISTENCIAS
 Route::controller(AsistenciasController::class)->group(function () {
-    Route::get('asistencias/index', 'index')->name('asistencias/index');
+    Route::get('asistencias/index', 'index')->name('asistencias.index');
 });
 
 

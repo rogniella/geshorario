@@ -16,6 +16,7 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('profesores.registro') }}">Registro Entrada / Salida</a>
+                            <a class="nav-link" href="{{ route('asistencias.index') }}">Asistencias</a>
                         </li>
 
                       @guest

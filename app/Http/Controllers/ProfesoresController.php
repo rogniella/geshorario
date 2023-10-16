@@ -43,9 +43,8 @@ class ProfesoresController extends Controller
       $reg->save();
 
       $datos =  (object) [ 'dni' => $request->dni ,
-      'apellido' => $profe->apellidonombre,
-      'ultima_salida' => "01/08/2023 14:00 hs" ,
-      'ultimo_ingreso' => "01/08/2023 14:00 hs"  ];
+      'apellido' => $profe->apellidonombre
+        ];
 
       Flash::success("Se ha registrado de manera exitosa ! Id:" . $request->dni );
       return view('profesores.registro_confirmacion')->with('datos', $datos );

@@ -35,9 +35,6 @@
                             <input id="dni" type="text" name="dni" class="form-control" value="" placeholder="Ingrese Dni" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required  autofocus></p>
                         </div>
                         
-                        <div class="input-group input-group-sm mb-3">
-                            <input id="apellido" type="text" name="apellido" class="form-control" value="" placeholder="Ingrese apellido" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required></p>
-                        </div>
                         
                         <div class="input-group input-group-sm mb-3">
                             <input id="password" type="password" class="form-control" name="password" value="" placeholder="Ingrese Contraseña" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required>
