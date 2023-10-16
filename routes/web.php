@@ -33,7 +33,7 @@ Route::group( ['middleware' => ['auth'] ], function() {
 
 }); //FIN Requiere estar conectado
 
-    // MANTENIMIENTO DE USUARIOS	
+    // MANTENIMIENTO DE USUARIOS
     Route::resource('users','App\Http\Controllers\UserController');
     Route::get('user/password', 'App\Http\Controllers\UserController@password');
     Route::post('user/updatepassword', 'App\Http\Controllers\UserController@updatePassword');

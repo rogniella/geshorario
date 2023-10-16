@@ -22,14 +22,14 @@
 <body>
     <div id="app">
         @include('layouts.partials.menu')
-        <main class="py-4">
+        <main class="p-5">
             @include('flash::message')
             @yield('content')
         </main>
     </div>
 
     <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
-    @yield('scrip')
+    @yield('script')
 
 </body>
 </html>
