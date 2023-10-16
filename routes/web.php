@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfesoresController;
+use App\Http\Controllers\AsistenciasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,12 @@ use App\Http\Controllers\ProfesoresController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+//ASISTENCIAS
+Route::controller(AsistenciasController::class)->group(function () {
+    Route::get('asistencias/index', 'index')->name('asistencias/index');
+});
 
 
 //PROFESORES
