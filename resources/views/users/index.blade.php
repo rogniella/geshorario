@@ -5,8 +5,6 @@
 	<div class="container">
 
 		<div class="row">
-		
-		<div class="btn-success">ppppppppppp</div>
 
 			<div class="col-12 mb-4">
 
