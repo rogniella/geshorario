@@ -16,7 +16,11 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
+    <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
+
+    <!-- Estilo Local -->
+    <link rel="stylesheet" href="/css/app.css">
 
 </head>
 <body>
