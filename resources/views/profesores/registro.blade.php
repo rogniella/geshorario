@@ -12,45 +12,43 @@
         <div class="col-md-4"></div>
     </div>
 
-    <div class="row justify-content-center ">
-        <div class="col-lg-5 col-md-6">
-            <div class="card mb-4 border-primary border border-4">
-                <div class="card-body bg-black text-white">
-                    <div class="text-center">
-                        <img src="{{ asset('img/isfdlogo.png') }}"class="rounded" width="150" alt="">
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6 shadow-lg p-2 bg-body-tertiary rounded border border-4 mb-4">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <img src="{{ asset('img/isfdlogo.png') }}"class="rounded mb-2" width="150" alt="">
+                    <h5 class="fw-bold mb-3">Registro de entrada y salida</h5>
+                </div>
+                <form method="POST" action="{{ route('profesores.registro_graba') }}">
+                @csrf
+                    
+                    <p class="fw-bold">FECHA:<h7 id="fecha_entrada" name='fecha_entrada' onload="showDate();"></h7>
+                    <p class="fw-bold">HORA:<h7 id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
+
+                    <div class="mt-4 mb-3">
+                        <label for="dni" class="form-label fw-bold">Numero de DNI</label>
+                        <input type="text" class="form-control" id="dni" name="dni">
                     </div>
-                    <h5 class="card-title">Registro de Entrada/Salida</h5>
-                    <form method="POST" action="{{ route('profesores.registro_graba') }}">
-                    @csrf
-                        
-                        <p>FECHA: <h7 class="" id="fecha_entrada" name='fecha_entrada' onload="showDate();"></h7></p>
-                        <p>HORA: <h7 class="" id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
 
-                        <div class="input-group input-group-sm mb-3 d-none">
-                            <input class="" id="fecha_entrada" name='fecha_entrada' onload="showDate();">
-                            <input class="" id="hora_entrada" name='hora_entrada' onload="showTime();">
-                        </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label fw-bold">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
 
-                        <div class="input-group input-group-sm mb-3">
-                            <input id="dni" type="text" name="dni" class="form-control" value="" placeholder="Ingrese Dni" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required  autofocus></p>
-                        </div>
-                        
-                        
-                        <div class="input-group input-group-sm mb-3">
-                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Ingrese Contraseña" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" required>
-                        </div>
-                        
-                        <div class="card-footer text-center">
+                    <div class="container text-center">
+                        <div class="mb-4">
                             <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
-                            <br>
+                        </div>
+                        <div class="mb-1">
                             <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
                         </div>
-                        
-                    </form> 
-                </div>
+                    </div>
+                    
+                </form> 
             </div>
         </div>
     </div>
+    
 </section>
 
 <!-- 
