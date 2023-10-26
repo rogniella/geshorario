@@ -22,8 +22,8 @@
                 <form method="POST" action="{{ route('profesores.registro_graba') }}">
                 @csrf
                     
-                    <p class="fw-bold">FECHA:<h7 id="fecha_entrada" name='fecha_entrada' onload="showDate();"></h7>
-                    <p class="fw-bold">HORA:<h7 id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
+                    <p class="fw-bold">FECHA: <h7 id="fecha_entrada" name='fecha_entrada' onload="showDate();"></h7></p>
+                    <p class="fw-bold">HORA: <h7 id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
 
                     <div class="mt-4 mb-3">
                         <label for="dni" class="form-label fw-bold">Numero de DNI</label>
