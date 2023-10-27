@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="container py-1">
-
+<!-- 
     <div class="row">
         <div class="col-md-4"></div>
             <div class="col-md-4 text-center">
@@ -11,7 +11,7 @@
             </div>
         <div class="col-md-4"></div>
     </div>
-
+ -->
     <div class="row justify-content-center">
         <div class="col-lg-5 col-md-6 shadow-lg p-2 bg-body-tertiary rounded border border-4 mb-4">
             <div class="card-body">
@@ -29,6 +29,7 @@
                         <label for="dni" class="form-label fw-bold">Numero de DNI</label>
                         <input type="text" class="form-control" id="dni" name="dni">
                     </div>
+
 
                     <div class="mb-3">
                         <label for="password" class="form-label fw-bold">Contraseña</label>
