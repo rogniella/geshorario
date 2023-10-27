@@ -33,6 +33,11 @@
 				</div>
 
 				<div class="mb-4">
+					<label class="form-label">Email</label>
+					<input id="email" type="email" name="email" class="form-control" value="{{$user->email}}" placeholder = "Email" required>
+				</div>
+
+				<div class="mb-4">
 					<label class="form-label">Perfil</label>
 					{!! Form::select('perfil_id', $perfiles, $user->perfil_id, ['class' => 'form-control', 'required']) !!}
 				</div>
