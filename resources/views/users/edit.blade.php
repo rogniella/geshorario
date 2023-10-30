@@ -29,7 +29,7 @@
 
 				<div class="mb-4">
 					<label class="form-label">Apellido y Nombre</label>
-					<input id="apellidonombre" type="text" name="apellidonombre" class="form-control" value="{{$user->name}}" placeholder = "Apellido y Nombre" required>
+					<input id="apellidonombre" type="text" name="apellidonombre" class="form-control" value="{{$user->apellidonombre}}" placeholder = "Apellido y Nombre" required>
 				</div>
 
 				<div class="mb-4">
