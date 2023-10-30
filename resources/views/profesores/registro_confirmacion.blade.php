@@ -12,7 +12,7 @@
                             <ul class="list-group">
 
                                 <li class="list-group-item">DNI: {{ $datos->dni }}</li>
-                                <li class="list-group-item">Apellido: {{ $datos->apellido }}</li>
+                                <li class="list-group-item">Nombre y apellido: {{ $datos->apellido }}</li>
 
                             </ul>
                             <br>

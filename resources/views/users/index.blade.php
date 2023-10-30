@@ -81,7 +81,7 @@ $.extend(true, $.fn.dataTable.defaults, {
 
 $(document).ready(function () {
 
-   //Inicia con valores por defecto  $('#mitabla').DataTable();
+   //Inicia con valores por defecto  $('#mitabla').DataTable(); 
 
    // Definimos para 1 tabla en particular
 	$('#mitabla').DataTable({
