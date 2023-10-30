@@ -26,10 +26,9 @@
                     <p class="fw-bold">HORA: <h7 id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
 
                     <div class="mt-4 mb-3">
-                        <label for="dni" class="form-label fw-bold">Numero de DNI</label>
+                        <label for="dni" class="form-label fw-bold">Numero de DNI</label>   <!--    usa 'apellidonombre' de la base de datos en la tabla 'users'    -->
                         <input type="text" class="form-control" id="dni" name="dni">
                     </div>
-
 
                     <div class="mb-3">
                         <label for="password" class="form-label fw-bold">Contraseña</label>
