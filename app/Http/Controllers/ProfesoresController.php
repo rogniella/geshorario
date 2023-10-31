@@ -16,8 +16,8 @@ class ProfesoresController extends Controller
 
     //probar:  http://localhost/geshorario/public/profesores/registro
 
-
-    return view('profesores.registro'  );
+    $profe = User::where("perfil_id", 'PRO')->get();
+    return view('profesores.registro')->with('profe', $profe);
 
   } // Fin registro 
 
@@ -25,16 +25,17 @@ class ProfesoresController extends Controller
   {
       // Boton Aceptar de la vista registro
 
+    $profes = User::where("perfil_id", 'PRO')->get();
     $profe = User::where("name",$request->dni)->first();
     if (  ! $profe ){
       Flash::error("Error: No esta Registrado !! " );
-      return view('profesores.registro'  );
+      return view('profesores.registro')->with('profe', $profes);
     }
 
     $ret =  password_verify($request->password, $profe->password);
     if  ( !  $ret ) {
       Flash::error("Error: Clave Incorrecta !! " );
-      return view('profesores.registro'  );
+      return view('profesores.registro')->with('profe', $profes);
     } 
         
       $reg = new Asistencia();

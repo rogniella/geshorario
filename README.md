@@ -26,3 +26,8 @@
   6- escribir 'npm run build'.
 
   7- y para correr el servir escribir 'php artisan serve'.
+
+
+  typeahead se usa para ajax
+  daterangerpicker
+  

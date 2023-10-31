@@ -3,15 +3,7 @@
 @section('content')
 
 <section class="container py-1">
-<!-- 
-    <div class="row">
-        <div class="col-md-4"></div>
-            <div class="col-md-4 text-center">
-                @include('flash::message')
-            </div>
-        <div class="col-md-4"></div>
-    </div>
- -->
+
     <div class="row justify-content-center">
         <div class="col-lg-5 col-md-6 shadow-lg p-2 bg-body-tertiary rounded border border-4 mb-4">
             <div class="card-body">
@@ -24,12 +16,23 @@
                     
                     <p class="fw-bold">FECHA: <h7 id="fecha_entrada" name='fecha_entrada' onload="showDate();"></h7></p>
                     <p class="fw-bold">HORA: <h7 id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
-
+<!-- 
                     <div class="mt-4 mb-3">
-                        <label for="dni" class="form-label fw-bold">Numero de DNI</label>   <!--    usa 'apellidonombre' de la base de datos en la tabla 'users'    -->
+                        <label for="dni" class="form-label fw-bold">Numero de DNI</label>
                         <input type="text" class="form-control" id="dni" name="dni">
                     </div>
+ -->
 
+                    <label for="dni" class="form-label fw-bold">Numero de DNI</label>
+
+                    <select class="form-select" name="dni" id="dni" data-live-search="true">
+                    @foreach($profe as $prof)
+                        <option value="{{ $prof->name}}">
+                        {{ $prof->apellidonombre}}
+                        </option>
+                    @endforeach()
+                    </select>
+ 
                     <div class="mb-3">
                         <label for="password" class="form-label fw-bold">Contraseña</label>
                         <input type="password" class="form-control" id="password" name="password">
@@ -39,6 +42,7 @@
                         <div class="mb-4">
                             <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
                         </div>
+                        
                         <div class="mb-1">
                             <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
                         </div>
@@ -56,6 +60,10 @@
 @section('script')
 
 <script>
+
+    $(document).ready(function() {
+        $('#dni').select2();
+    });
 
     $(document).ready(function () {
         showDate();
