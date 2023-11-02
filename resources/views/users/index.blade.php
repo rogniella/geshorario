@@ -8,7 +8,7 @@
 
 			<div class="col-12 mb-4">
 
-				<div class="text-center shadow-lg p-2 bg-body-tertiary rounded">
+			<div class="text-center shadow-lg p-2 bg-body-tertiary rounded border border-black">
 					<h3 class="fw-bold">Lista de usuarios</h3>
 				</div>
 				
@@ -24,8 +24,22 @@
 
 
 			<div class="col-12 mb-4">
+<!-- 
+				<table class="table table-hover shadow-lg p-2 bg-body-tertiary rounded">
+					<tbody>
+						<tr>
+							<td>Minimum date:</td>
+							<td><input type="text" id="min" name="min"></td>
+						</tr>
+						<tr>
+							<td>Maximum date:</td>
+							<td><input type="text" id="max" name="max"></td>
+						</tr>
+					</tbody>
+				</table>				
+-->
+				<table class="table table-hover shadow-lg p-2 bg-body-tertiary border border-black rounded" id="example" >
 
-				<table class="table table-hover shadow-lg p-2 bg-body-tertiary rounded" id="mitabla">
 					<thead>
 						<tr>
 							<th scope="col">Id</th>
@@ -72,7 +86,56 @@
 @section('script')
 
 <script>
+let minDate, maxDate;
+ 
+// Custom filtering function which will search data in column four between two values
+DataTable.ext.search.push(function (settings, data, dataIndex) {
+    let min = minDate.val();
+    let max = maxDate.val();
+    let date = new Date(data[4]);
+ 
+    if (
+        (min === null && max === null) ||
+        (min === null && date <= max) ||
+        (min <= date && max === null) ||
+        (min <= date && date <= max)
+    ) {
+        return true;
+    }
+    return false;
+});
+ 
+// Create date inputs
+minDate = new DateTime('#min', {
+    format: 'MMMM Do YYYY'
+});
+maxDate = new DateTime('#max', {
+    format: 'MMMM Do YYYY'
+});
+ 
+// DataTables initialisation
+let table = new DataTable('#example', {
+	language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
+    },
+});
+ 
+// Refilter the table
+document.querySelectorAll('#min, #max').forEach((el) => {
+    el.addEventListener('change', () => table.draw());
+});
+</script>
 
+
+<script url="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script url="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script url="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+<script url="https://cdn.datatables.net/datetime/1.5.1/js/dataTables.dateTime.min.js"></script>
+
+
+
+<!-- 
+<script>
 // Si definimos asi va para todas las tablas del proyecto
 $.extend(true, $.fn.dataTable.defaults, {
 	searching: false,
@@ -95,7 +158,6 @@ $(document).ready(function () {
 	$('div.toolbar').html('');
 
 });
-
 </script>
-
+ -->
 @endsection()
