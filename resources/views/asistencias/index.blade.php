@@ -8,9 +8,7 @@
 
 			<div class="col-12 mb-4">
 
-				<div class="text-center shadow-lg p-2 bg-body-tertiary rounded border border-black">
-					<h3 class="fw-bold">Lista de asistenciass</h3>
-				</div>
+					<h3 class="fw-bold titulo">Asistencias</h3>
 				
 			</div>
 
@@ -19,11 +17,11 @@
 					<tbody>
 						<tr>
 							<td>Fecha inicio:</td>
-							<td><input type="text" id="min" name="min"></td>
+							<td><i class="bi bi-calendar m-2"></i><input type="text" id="min" name="min"></td>
 						</tr>
 						<tr>
 							<td>Fecha final:</td>
-							<td><input type="text" id="max" name="max"></td>
+							<td><i class="bi bi-calendar m-2"></i><input type="text" id="max" name="max"></td>
 						</tr>
 					</tbody>
 				</table>

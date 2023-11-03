@@ -8,9 +8,7 @@
 
 			<div class="col-12 mb-4">
 
-			<div class="text-center shadow-lg p-2 bg-body-tertiary rounded border border-black">
-					<h3 class="fw-bold">Lista de usuarios</h3>
-				</div>
+				<h3 class="fw-bold titulo">Lista de usuarios</h3>
 				
 			</div>
 

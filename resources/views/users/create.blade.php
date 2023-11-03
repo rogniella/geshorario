@@ -8,9 +8,7 @@
 
 		<div class="col-12 mb-4">
 
-			<div class="text-center shadow-lg p-2 bg-body-tertiary rounded">
-				<h3 class="fw-bold">Nuevo usuario</h3>
-			</div>
+			<h3 class="fw-bold titulo">Nuevo usuario</h3>
 
 		</div>
 
