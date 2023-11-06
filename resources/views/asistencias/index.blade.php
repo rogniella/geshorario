@@ -8,7 +8,7 @@
 
 			<div class="col-12 mb-4">
 
-					<h3 class="fw-bold titulo">Asistencias</h3>
+				<h3 class="fw-bold titulo">Asistencias</h3>
 				
 			</div>
 
