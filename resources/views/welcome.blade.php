@@ -109,7 +109,7 @@
                                 <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">{{ __('Login') }}</h2>
 
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Si ya se posee su usuario en la gestion de horario de IFD ingresa aqui.
+                                    Si ya se posee su usuario en la gestion de horario de IFD ingresa aqui..
                                 </p>
                             </div>
 
