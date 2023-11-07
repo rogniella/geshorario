@@ -5,8 +5,7 @@ html {
 }
 
 body {
-    background: rgb(88,88,255);
-    background: radial-gradient(circle, rgb(180, 180, 255) 0%, rgb(47, 144, 189) 0%, rgba(180, 180, 255) 100%);
+    background-image: linear-gradient( 117deg,  rgba(123,216,96,1) 39.2%, rgba(255,255,255,1) 156.2% );
 }
 
 .titulo {
