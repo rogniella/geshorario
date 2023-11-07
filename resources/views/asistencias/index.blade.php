@@ -57,6 +57,7 @@
 
 @section('script')
 
+
 <script>
 let minDate, maxDate;
  
@@ -81,6 +82,7 @@ DataTable.ext.search.push(function (settings, data, dataIndex) {
 minDate = new DateTime('#min', {
     format: 'MMMMM Do YYYY'
 });
+
 maxDate = new DateTime('#max', {
     format: 'MMMM Do YYYY'
 });
@@ -88,9 +90,10 @@ maxDate = new DateTime('#max', {
 // DataTables initialisation
 let table = new DataTable('#example', {
 	language: {
-        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
+        url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json',
     },
 });
+
  
 // Refilter the table
 document.querySelectorAll('#min, #max').forEach((el) => {
@@ -99,10 +102,13 @@ document.querySelectorAll('#min, #max').forEach((el) => {
 </script>
 
 
+
 <script url="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script url="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script url="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
 <script url="https://cdn.datatables.net/datetime/1.5.1/js/dataTables.dateTime.min.js"></script>
+
+
 
 
 <!-- <script>

@@ -19,10 +19,9 @@
 </div>
 
 <script>
-        setTimeout(function() {
-            // Redirigir al usuario a la vista anterior
-            window.history.back();
-        }, 3000);   // 3000 milisegundos = 3 segundos
+     setTimeout(function() {
+        // Redirige al usuario a la vista de registro
+        window.location.href = "{{ route('profesores.registro') }}";
+    }, 3000);
 </script>
-
 @endsection
