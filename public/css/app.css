@@ -5,7 +5,9 @@ html {
 }
 
 body {
-    background-image: linear-gradient( 117deg,  rgba(123,216,96,1) 39.2%, rgba(255,255,255,1) 156.2% );
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(41, 191, 0);
 }
 
 .titulo {
@@ -15,73 +17,63 @@ body {
     background: #202020; 
     -webkit-background-clip: text; 
     -moz-background-clip: text; 
-    background-clip: text; 
-    color: transparent; 
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
-    }
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0, 0, 0, 0.3);
+}
+/* 
+.subtitulo {
+    
+}
+ */    
+.container-registro {
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px black solid;
+    box-shadow: 0px 0px 30px 2px;
+    backdrop-filter: blur(30px);
+    background-color: white;
+    color: black;
+}
+
+.input-isfd {
+    border: #9e9e9e 1px solid;
+}
+
+.container-isfd {
+    height: 50vh;
+}
+
+.bg-link-isfd {
+    display: inline;
+    text-decoration: none;
+}
 
 .bg-isfd {
     padding: 25px;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 1px black solid;
-    box-shadow: 15px 15px 5px 5px;
+    box-shadow: 0px 0px 30px 2px;
     backdrop-filter: blur(30px);
+    background-color: white;
+    color: black;
 }
 
 .bg-person {
     width: 50px;
     height: 50px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(41, 191, 0);
+    box-shadow: 0px 0px 30px 2px;
     border-radius: 50px;
+    border: black 1px solid;
     text-align: center;
 }
 
 
 .bi-person {
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
 }.bi-person-add {
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
-
-/* 
-
-<a href="{{ route('login') }}" class="bg-isfd"> <!-- scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"> -->
-                            <div> 
-                            <div class="bg-person">
-                                <i class="bi bi-person"></i>
-                            </div>
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">{{ __('Login') }}</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Si ya se posee su usuario en la gestion de horario de IFD ingresa aqui.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-            
-
-                        <a href="{{ route('register') }}" class="bg-isfd"> <!-- scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"> -->
-                            <div>
-                                <div class="bg-person">
-                                    <i class="bi bi-person-add"></i>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">{{ __('Register') }}</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Si desea registrarse o registrar un usuario ingrese aqui
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-*/

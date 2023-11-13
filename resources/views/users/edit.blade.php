@@ -31,6 +31,11 @@
 				</div>
 
 				<div class="mb-4">
+					<label class="form-label">Contraseña</label>
+					<input id="password" type="text" name="password" class="form-control" value="{{$user->password}}" placeholder = "Contraseña" required>
+				</div>
+
+				<div class="mb-4">
 					<label class="form-label">Email</label>
 					<input id="email" type="email" name="email" class="form-control" value="{{$user->email}}" placeholder = "Email" required>
 				</div>

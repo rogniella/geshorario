@@ -5,62 +5,62 @@
 <section class="container py-1">
 
     <div class="row justify-content-center">
-        <div class="col-lg-5 col-md-6 shadow-lg p-2 bg-body-tertiary rounded border border-4 mb-4">
-            <div class="card-body">
-                <div class="text-center mb-4">
-                    <img src="{{ asset('img/isfdlogo.png') }}"class="rounded mb-2" width="150" alt="">
-                    <h5 class="fw-bold mb-3">Registro de entrada y salida</h5>
-                </div>
-                <form method="POST" action="{{ route('profesores.registro_graba') }}">
-                @csrf
-                    
-                    <p class="fw-bold">FECHA: <h7 id="fecha_entrada" name='fecha_entrada' onload="showDate();"></h7></p>
-                    <p class="fw-bold">HORA: <h7 id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
+        <div class="col-lg-5 col-md-6 p-2 mb-4 container-registro">
+            
+            <div class="text-center mb-4">
+                <img src="{{ asset('img/isfdlogo.png') }}"class="rounded mb-2 border border-1 border-dark" width="150" alt="">
+                <h5 class="fw-bold mb-3">Registro de entrada y salida</h5>
+            </div>
+            <form method="POST" action="{{ route('profesores.registro_graba') }}">
+            @csrf
+                
+                <p class="fw-bold">FECHA: <h7 id="fecha_entrada" name='fecha_entrada' onload="showDate();"></h7></p>
+                <p class="fw-bold">HORA: <h7 id="hora_entrada" name='hora_entrada' onload="showTime();"></h7></p>
 <!-- 
-                    <div class="mt-4 mb-3">
-                        <label for="dni" class="form-label fw-bold">Numero de DNI</label>
-                        <input type="text" class="form-control" id="dni" name="dni">
-                    </div>
- -->
-
+                <div class="mt-4 mb-3">
                     <label for="dni" class="form-label fw-bold">Numero de DNI</label>
-
-                    <select class="form-select" name="dni" id="dni" data-live-search="true">
+                    <input type="text" class="form-control" id="dni" name="dni">
+                </div>
+-->
+                
+                <div class="mb-3">
+                    <label for="dni" class="form-label fw-bold">Usuario</label>
+                    <select class="form-select bg-white input-isfd" name="dni" id="dni" data-live-search="true">
                     @foreach($profe as $prof)
                         <option value="{{ $prof->name}}">
                         {{ $prof->apellidonombre}}
                         </option>
                     @endforeach()
                     </select>
- 
-                    <div class="mb-3">
-                        <label for="password" class="form-label fw-bold">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
+                </div>
 
-                    <div class="container text-center">
-                        <div class="mb-4">
-                            <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
-                        </div>
-                        
-                        <div class="mb-1">
-                            @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            @endif
-                        </div>
-                        
-                        <!-- 
-                        <div class="mb-1">
-                            <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
-                        </div>
-                         -->
-                         
+                <div class="mb-3">
+                    <label for="password" class="form-label fw-bold">Contraseña</label>
+                    <input type="password" class="form-control bg-white input-isfd" id="password" name="password">
+                </div>
+
+                <div class="container text-center">
+                    <div class="mb-4">
+                        <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
                     </div>
                     
-                </form> 
-            </div>
+                    <div class="mb-1">
+                        @if (Route::has('password.request'))
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
+                        @endif
+                    </div>
+                    
+                    <!-- 
+                    <div class="mb-1">
+                        <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
+                    </div>
+                        -->
+                        
+                </div>
+                
+            </form> 
         </div>
     </div>
     
