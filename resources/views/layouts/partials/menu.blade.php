@@ -44,9 +44,9 @@
                     @endif
 
                     @if (Route::has('register'))
-                        <li class="nav-item d-none">
+                        <!-- <li class="nav-item d-none">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
+                        </li> -->
                     @endif
                 @else
                     <li class="nav-item dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,7 +60,6 @@
                                                 document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>

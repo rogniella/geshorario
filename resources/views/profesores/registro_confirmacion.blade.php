@@ -10,7 +10,6 @@
                     <h5 class="fw-bold mb-3">Registro de entrada y salida</h5>
                 </div>
 
-                <li class="list-group-item">DNI: {{ $datos->dni }}</li>
                 <li class="list-group-item">Nombre y apellido: {{ $datos->apellido }}</li>
           
             </div>
@@ -19,10 +18,9 @@
 </div>
 
 <script>
-        setTimeout(function() {
-            // Redirigir al usuario a la vista anterior
-            window.history.back();
-        }, 3000);   // 3000 milisegundos = 3 segundos
+     setTimeout(function() {
+        // Redirige al usuario a la vista de registro
+        window.location.href = "{{ route('profesores.registro') }}";
+    }, 3000);
 </script>
-
 @endsection

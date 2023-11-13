@@ -17,7 +17,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
         <link rel="stylesheet" href="/css/app.css">
-
     </head>
 
     <body>
@@ -69,53 +68,5 @@
 
             </div>
         </div>
-
-        <!-- 
-        
-        
-        <div class="container">
-            <div class="row text-center justify-content-center">
-                <div class="col-auto">
-                    <div class="">
-                        
-                        <div class="mt-16">
-                            
-                            <div class="m-5 container-isfd">
-                                
-                                <a href="{{ route('login') }}" class="m-5">
-                                    <div  class="bg-isfd">
-                                        <div class="bg-person">
-                                            <i class="bi bi-person"></i>
-                                        </div>
-                                        <h2 class="subtitulo">{{ __('Login') }}</h2>
-
-                                        <p class="">
-                                            Inicie sesión para tener acceso a la gestión de horarios del ISFD.
-                                        </p>
-                                    </div>
-                                </a>
-                    
-
-                                <a href="{{ route('profesores.registro') }}" class="m-5">
-                                    <div class="bg-isfd">
-                                        <div class="bg-person">
-                                            <i class="bi bi-person-add"></i>
-                                        </div>
-
-                                        <h2 class="subtitulo">Registro</h2>
-
-                                        <p class="">
-                                            Para registrar la llegada de un profesor/a, haga click aquí.
-                                        </p>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- -->
     </body>
 </html>
