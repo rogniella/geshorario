@@ -10,7 +10,6 @@
                     <h5 class="fw-bold mb-3">Registro de entrada y salida</h5>
                 </div>
 
-                <li class="list-group-item">DNI: {{ $datos->dni }}</li>
                 <li class="list-group-item">Nombre y apellido: {{ $datos->apellido }}</li>
           
             </div>

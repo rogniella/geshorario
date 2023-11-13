@@ -23,9 +23,9 @@
                     </div>
  -->
 
-                    <label for="dni" class="form-label fw-bold">Numero de DNI</label>
+                    <label for="dni" class="form-label fw-bold">Nombre</label>
 
-                    <select class="form-select" name="dni" id="dni" data-live-search="true">
+                    <select class="form-select" name="dni" id="dni" data-live-search="true" autocomplete="off">
                     @foreach($profe as $prof)
                         <option value="{{ $prof->name}}">
                         {{ $prof->apellidonombre}}
@@ -35,7 +35,7 @@
  
                     <div class="mb-3">
                         <label for="password" class="form-label fw-bold">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="password">
+                        <input type="password" class="form-control" id="password" autocomplete="new-password" name="password">
                     </div>
 
                     <div class="container text-center">
