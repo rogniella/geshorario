@@ -4,11 +4,11 @@
 
 <section class="container py-1">
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center m-5">
         <div class="col-lg-5 col-md-6 p-2 mb-4 container-registro">
             
             <div class="text-center mb-4">
-                <img src="{{ asset('img/isfdlogo.png') }}"class="rounded mb-2 border border-1 border-dark" width="150" alt="">
+                <img src="{{ asset('img/isfdlogo.png') }}"class="rounded mb-2 border border-1 border-dark" width="100" alt="">
                 <h5 class="fw-bold mb-3">Registro de entrada y salida</h5>
             </div>
             <form method="POST" action="{{ route('profesores.registro_graba') }}">
@@ -21,6 +21,9 @@
                 <div class="mb-3">
                     <label for="dni" class="form-label fw-bold">Usuario</label>
                     <select class="form-select bg-white input-isfd" name="dni" id="dni" data-live-search="true">
+                        <option value="null" selected disabled>
+                            Seleccione su usuario.
+                        </option>
                     @foreach($profe as $prof)
                         <option value="{{ $prof->name}}">
                         {{ $prof->apellidonombre}}
@@ -37,22 +40,7 @@
                 <div class="container text-center">
                     <div class="mb-4">
                         <button type="submit" class="btn btn-primary btn-block">Ingresar datos</button>
-                    </div>
-                    
-                    <div class="mb-1">
-                        @if (Route::has('password.request'))
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                {{ __('Forgot Your Password?') }}
-                            </a>
-                        @endif
-                    </div>
-                    
-                    <!-- 
-                    <div class="mb-1">
-                        <a class="text-secondary" href="/register">¿Olvidaste tu contraseña? Haz click aquí</a>
-                    </div>
-                        -->
-                        
+                    </div>    
                 </div>
                 
             </form> 

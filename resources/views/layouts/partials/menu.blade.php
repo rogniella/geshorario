@@ -19,13 +19,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('profesores.registro') }}">Registro Entrada / Salida</a>
                 </li>
+                @guest
+                
+                @else
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('asistencias.index') }}">Asistencias</a>
                 </li>
-
-                @guest
-
-                @else
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
                 </li>

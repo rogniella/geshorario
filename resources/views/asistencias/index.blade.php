@@ -7,13 +7,11 @@
 		<div class="row">
 
 			<div class="col-12 mb-4">
-
 				<h3 class="fw-bold titulo">Asistencias</h3>
-				
 			</div>
 
-			<div class="col-12 mb-4">
-				<table class="table table-hover shadow-lg p-2 bg-body-tertiary border border-black w-25">
+			<div class="col-3 mb-3">
+				<table class="table table-hover p-2 bg-body-tertiary border border-black rounded table-isfd">
 					<tbody>
 						<tr>
 							<td>Fecha inicio:</td>
@@ -25,8 +23,10 @@
 						</tr>
 					</tbody>
 				</table>
-			
-				<table class="table table-hover shadow-lg p-2 bg-body-tertiary border border-black rounded" id="example" >
+			</div>
+
+			<div class="col-12 mb-4">
+				<table class="table table-hover p-2 bg-body-tertiary border border-black rounded table-isfd" id="example" >
 
 					<thead>
 						<tr>

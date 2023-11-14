@@ -35,11 +35,11 @@
         </nav>
 
         <div class="row justify-content-center m-5">
-            
-        <div class="m-5 col-lg-6 container-isfd">
-                            
+            <div class="col-lg-5 container-isfd">
+                                
                 <a href="{{ route('login') }}" class="m-5 bg-link-isfd">
                     <div class="bg-isfd">
+                        
                         <div class="bg-person">
                             <i class="bi bi-person"></i>
                         </div>
@@ -68,5 +68,6 @@
 
             </div>
         </div>
+
     </body>
 </html>

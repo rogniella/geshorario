@@ -16,7 +16,7 @@
 
 		<div class="col-12 mb-4">
 
-			<div class="shadow-lg p-2 bg-body-tertiary rounded fw-bold">
+			<div class="p-2 bg-body-tertiary rounded fw-bold table-isfd">
 
 				{!! Form::open(['route' => ['users.update', $user], 'method' => 'PUT']) !!}
 
@@ -51,8 +51,8 @@
 				</div>
 
 				<div class="mb-1">
-					<button type="submit" class="btn btn-success fw-bold">Aceptar</button>
-					<button type="button" class="btn btn-primary fw-bold" data-dismiss="modal" onClick=" window.history.back()">Cancelar</button>
+					<button type="button" class="btn btn-danger bordered border-black border-1" data-dismiss="modal" onClick=" window.history.back()">Cancelar</button>
+					<button type="submit" class="btn btn-success bordered border-black border-1">Aceptar</button>
 				</div>
 
 				{!! Form::close() !!}

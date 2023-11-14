@@ -16,10 +16,7 @@ use App\Http\Controllers\AsistenciasController;
 */
 
 
-//ASISTENCIAS
-Route::controller(AsistenciasController::class)->group(function () {
-    Route::get('asistencias/index', 'index')->name('asistencias.index');
-});
+
 
 
 //PROFESORES
@@ -31,9 +28,9 @@ Route::controller(AsistenciasController::class)->group(function () {
 // REQUIEREN ESTAR LOGUEADO	
 Route::group( ['middleware' => ['auth'] ], function() {
 
-}); //FIN Requiere estar conectado
-
-    // MANTENIMIENTO DE USUARIOS
+    //ASISTENCIAS
+    Route::controller(AsistenciasController::class)->group(function () {
+    Route::get('asistencias/index', 'index')->name('asistencias.index');
     Route::resource('users','App\Http\Controllers\UserController');
     Route::get('user/password', 'App\Http\Controllers\UserController@password');
     Route::post('user/updatepassword', 'App\Http\Controllers\UserController@updatePassword');
@@ -41,6 +38,12 @@ Route::group( ['middleware' => ['auth'] ], function() {
     Route::get('user/{id}/destroy', [
             'uses' => 'App\Http\Controllers\UserController@destroy' ,  // nombreControlador@metodo
             'as' => 'user.destroy' ]);
+    });
+
+}); //FIN Requiere estar conectado
+
+    // MANTENIMIENTO DE USUARIOS
+    
 
 
 Route::get('/', function () {

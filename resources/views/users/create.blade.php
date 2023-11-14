@@ -12,9 +12,9 @@
 
 		</div>
 
-		<div class="col-12 mb-4 fw-bold">
+		<div class="p-2 bg-body-tertiary rounded col-12 mb-4 fw-bold table-isfd">
 
-			<form method="POST" action="{{ route('users.store') }}" class="shadow-lg p-2 bg-body-tertiary rounded">
+			<form method="POST" action="{{ route('users.store') }}" class="">
 				@csrf
 
 				<div class="mb-4">
@@ -43,8 +43,8 @@
 				</div>
 
 				<div class="mb-1">
-					<button type="submit" class="btn btn-success fw-bold">Aceptar</button>
-					<button type="button" class="btn btn-primary fw-bold" data-dismiss="modal" onClick=" window.history.back()">Cancelar</button>
+					<button type="button" class="btn btn-danger bordered border-black border-1" data-dismiss="modal" onClick=" window.history.back()">Cancelar</button>
+					<button type="submit" class="btn btn-success bordered border-black border-1">Aceptar</button>
 				</div>
 				
 			</form>   
