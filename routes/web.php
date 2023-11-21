@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfesoresController;
 use App\Http\Controllers\AsistenciasController;
+use App\Http\Controllers\SedeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ use App\Http\Controllers\AsistenciasController;
     Route::controller(ProfesoresController::class)->group(function () {
         Route::get('profesores/registro', 'registro')->name('profesores.registro');
         Route::post('profesores/registro_graba', 'registro_graba')->name('profesores.registro_graba');
+        
     });
 
 // REQUIEREN ESTAR LOGUEADO	
@@ -35,11 +37,16 @@ Route::group( ['middleware' => ['auth'] ], function() {
     Route::get('user/password', 'App\Http\Controllers\UserController@password');
     Route::post('user/updatepassword', 'App\Http\Controllers\UserController@updatePassword');
     // la defino asi para llamarla directamente
+     // SEDES
+    Route::resource('sedes', SedeController::class)->only([
+        'index', 'create', 'store', 'edit', 'update', 'destroy'
+    ]);
     Route::get('user/{id}/destroy', [
             'uses' => 'App\Http\Controllers\UserController@destroy' ,  // nombreControlador@metodo
             'as' => 'user.destroy' ]);
-    });
 
+    });
+    
 }); //FIN Requiere estar conectado
 
     // MANTENIMIENTO DE USUARIOS
