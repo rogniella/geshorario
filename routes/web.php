@@ -37,10 +37,13 @@ Route::group( ['middleware' => ['auth'] ], function() {
     Route::get('user/password', 'App\Http\Controllers\UserController@password');
     Route::post('user/updatepassword', 'App\Http\Controllers\UserController@updatePassword');
     // la defino asi para llamarla directamente
-     // SEDES
-    Route::resource('sedes', SedeController::class)->only([
-        'index', 'create', 'store', 'edit', 'update', 'destroy'
-    ]);
+
+
+    // SEDES
+    Route::resource('sedes', SedeController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']); //este hiciste vos (rodri) solo le deje todo en una linea
+    Route::get('sedes/asist_x_sede', 'index')->name('sedes.asist_x_sede'); //supuestamente seria para la funcinon que busca por sedes.id
+
+
     Route::get('user/{id}/destroy', [
             'uses' => 'App\Http\Controllers\UserController@destroy' ,  // nombreControlador@metodo
             'as' => 'user.destroy' ]);

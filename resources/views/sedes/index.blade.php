@@ -2,36 +2,18 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center fs-5">
             <div class="col-12 mb-4">
                 <h3 class="fw-bold titulo">Sedes</h3>
             </div>
 
-            <div class="col-3 mb-3">
-                
-                <table class="table table-hover p-2 bg-body-tertiary border border-black rounded table-isfd">
-                    <tbody>
-                        <tr>
-                            <td>Fecha inicio:</td>
-                            <td><i class="bi bi-calendar m-2"></i><input type="text" id="min" name="min"></td>
-                        </tr>
-                        <tr>
-                            <td>Fecha final:</td>
-                            <td><i class="bi bi-calendar m-2"></i><input type="text" id="max" name="max"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="col-12 mb-4">
-                <table class="table table-hover p-2 bg-body-tertiary border border-black rounded table-isfd" id="example">
-
+            <div class="col-9 mb-4">
+                <table class="table table-hover p-2 bg-body-tertiary border border-black rounded table-isfd text-center">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Profesor Asignado</th>
-                            <th scope="col">Fecha última Asistencia</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,8 +21,11 @@
                             <tr>
                                 <td scope="row">{{ $sede->id }}</td>
                                 <td>{{ $sede->nombre }}</td>
-                                <td>{{ $sede->profesor_nombre }}</td>
-                                <td>{{ $sede->ultima_asistencia }}</td>
+                                <td>
+                                    <a href="{{ route('sedes.asist_x_sede', $sede->id)}}" class="btn-btn-primary"> <!-- aca deberia buscar segun el tipo de id -->
+                                        <i class="bi bi-three-dots"></i>
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
