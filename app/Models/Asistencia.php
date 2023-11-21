@@ -9,5 +9,9 @@ class Asistencia extends Model {
 
 	protected $table = "asistencias";
 	protected $fillable = ['profesor_id' , 'sede_id']; 
+	public function usuario()
+    {
+        return $this->belongsTo(User::class, 'profesor_id');
+    }
 
 }

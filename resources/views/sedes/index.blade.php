@@ -22,7 +22,7 @@
                                 <td scope="row">{{ $sede->id }}</td>
                                 <td>{{ $sede->nombre }}</td>
                                 <td>
-                                    <a href="{{ route('sedes.asist_x_sede', $sede->id)}}" class="btn-btn-primary"> <!-- aca deberia buscar segun el tipo de id -->
+                                    <a href="{{ route('sedes.mostrar_asistencias', $sede->id)}}" class="btn-btn-primary"> <!-- aca deberia buscar segun el tipo de id -->
                                         <i class="bi bi-three-dots"></i>
                                     </a>
                                 </td>

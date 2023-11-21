@@ -40,8 +40,12 @@ Route::group( ['middleware' => ['auth'] ], function() {
 
 
     // SEDES
-    Route::resource('sedes', SedeController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']); //este hiciste vos (rodri) solo le deje todo en una linea
-    Route::get('sedes/asist_x_sede', 'index')->name('sedes.asist_x_sede'); //supuestamente seria para la funcinon que busca por sedes.id
+    Route::get('/sedes', [SedeController::class, 'index'])->name('sedes.index');
+    //Route::resource('sedes', SedeController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']); este hiciste vos (rodri) solo le deje todo en una linea
+
+    Route::get('/sedes/mostrar_asistencias/{id}', [SedeController::class, 'mostrarAsistencias'])->name('sedes.mostrar_asistencias');
+
+    //Route::get('sedes/asist_x_sede', 'index')->name('sedes.asist_x_sede'); supuestamente seria para la funcinon que busca por sedes.id
 
 
     Route::get('user/{id}/destroy', [
